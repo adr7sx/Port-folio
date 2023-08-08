@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="dinosaur-animation.css">
+    <style>
+        /* Estilos para o fundo de tela "off" */
+        body.offline {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.addEventListener('click', function (event) {
+                var spark = document.createElement('div');
+                spark.classList.add('spark');
+                spark.style.left = (event.clientX - 2) + 'px';
+                spark.style.top = (event.clientY - 2) + 'px';
+                document.body.appendChild(spark);
+
+                // Remover a faísca após a animação
+                spark.addEventListener('animationend', function () {
+                    spark.remove();
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const body = document.body;
+
+            window.addEventListener('online', function () {
+                body.classList.remove('offline');
+            });
+
+            window.addEventListener('offline', function () {
+                body.classList.add('offline');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const body = document.body;
+
+            window.addEventListener('online', function () {
+                body.classList.remove('offline');
+            });
+
+            window.addEventListener('offline', function () {
+                body.classList.add('offline');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="assets/c90350bfe1c75eced3fd98cf1954d5fc.jpg" alt="Adryan Jesus">
+        <div>
+            <h1>Adryan Jesus</h1>
+            <h2>Dev</h2>
+            <p>@adryanj_</p>
+            <h3>Pensamos demasiadamente e sentimos muito pouco. Necessitamos mais de humildade que de máquinas. Mais de bondade e ternura que de inteligência. Sem isso, a vida se tornará violenta e tudo se perderá.</h3>
+            <div class="dinosaur"></div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Redes Sociais</h1>
+            <div>
+                <a href="https://discord.gg/SWRct9kDWS">
+                    <article
+                        style="
+                        background: linear-gradient(
+                            45deg,
+                            #7289DA 0%,
+                            #7289DA 25%,
+                            #7289DA 50%,
+                            #7289DA 75%,
+                            #7289DA 100%
+                        );"
+                    >
+                        <img src="assets/logo-discord-icone-png-2.png" alt="">
+                        <h2>Discord</h2>
+                    </article>
+                </a>
+                <a href="https://www.instagram.com/adryanj_/">
+                    <article
+                        style="
+                        background: linear-gradient(
+                            45deg,
+                            #f89433 0%,
+                            #e6683c 25%,
+                            #dc2743 50%,
+                            #cc2366 75%,
+                            #bc1888 100%
+                        );"
+                    >
+                        <img src="assets/image.png" alt="">
+                        <h2>Instagram</h2>
+                    </article>
+                </a>
+                <a href="https://github.com/adr7sx">
+                    <article
+                        style="
+                        background: linear-gradient(
+                            45deg,
+                            #f89433 0%,
+                            #e6683c 25%,
+                            #dc2743 50%,
+                            #cc2366 75%,
+                            #bc1888 100%
+                        );"
+                    >
+                        <img src="assets/Octicons-mark-github.svg.png" alt="">
+                        <h2>GitHub</h2>
+                    </article>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Texto estilizado -->
+    <div class="antique-book" style="color: #6c5b4c;">
+        <h4>
+            Sou uma pessoa que tem o coração bom e busca construir um futuro brilhante como programador de JavaScript. Tenho paixão por desvendar os segredos do código e transformar ideias em realidade através da programação. Adoro participar de conversas animadas no Discord, onde posso compartilhar conhecimento, aprender com os outros e explorar novos conceitos tecnológicos.
+        </h4>
+        <p>
+            Embora valorize a interação virtual e a conexão com amigos por meio de plataformas online, confesso que o convívio pessoal me incomoda um pouco. Prefiro momentos de tranquilidade e concentração, nos quais posso mergulhar fundo nos meus projetos de programação. Isso não significa que não aprecio a companhia das pessoas, mas às vezes a introspecção me permite alcançar meu potencial máximo como programador e explorar a criatividade que flui do meu coração bom.
+        </p>
+    </div>
+
+    <button id="playButton">Play</button>
+    <audio id="audioPlayer" src="assets/X2Download.app - Deus. (128 kbps).mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

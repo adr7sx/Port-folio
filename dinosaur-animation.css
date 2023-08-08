@@ -1,0 +1,17 @@
+/* Estilos para a animação do dinossauro */
+@keyframes run-animation {
+    from { background-position: 0; }
+    to { background-position: -144px; }
+  }
+  
+  .dinosaur {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 47px;
+    background-image: url('caminho/para/dinosaur-sprite.png');
+    animation: run-animation 0.8s steps(4) infinite;
+  }
+  

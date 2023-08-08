@@ -1,0 +1,152 @@
+*{ @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500&display=swap');
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+
+}
+
+body {
+font-family: 'JetBrains Mono', monospace;
+background-color: #15141b;
+padding: 64px 24px;
+color: #fafafa;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+header img {
+height: 128px;
+height: 128px;
+border-radius: 50px;
+margin-right: 3rem;
+transition: 0.2s;
+}
+
+
+
+header img:hover {
+    outline: 4px solid #7964c6;
+
+}
+
+header div h1 {
+    font-size: 4rem;
+    font-weight: 100;
+}
+header div p {
+    margin-top: 20px;
+    font-size: 2.4rem;
+    background-color: #7964c6;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+main section {
+    max-width: 600px;
+    margin: 32px auto;
+}
+main dic h1 {
+    font-size: 2.4rem;
+}
+
+main section div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 32px auto;
+    gap: 16px;
+}
+main section div a {
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+@midia screen and (max-width: 768px){
+    section div a {
+        flex-basis: 600px:
+    }
+}
+
+
+main section div article {
+    min-height: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+}
+main section div article img {
+    width: 50px;
+    margin-right: 16px;
+    transition: 0.4s;
+    
+}
+
+main img src {
+    min-height: 91px;
+    padding:  8px;
+}
+
+main section div article:hover img {
+    width: 32px;
+}
+main section div article h2{
+text-align: center;
+font-size: 2.4rem;
+font-weight: 400px;
+color: #fafafa;
+} 
+
+/* Estilos para a animação de faísca */
+.spark {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    animation: sparkAnimation 0.5s ease-out forwards;
+  }
+  
+  @keyframes sparkAnimation {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(10);
+      opacity: 0;
+    }
+  }
+  /* styles.css */
+#playButton {
+    font-size: 16px;
+    padding: 5px 20px; /* Ajuste o espaçamento vertical e horizontal conforme necessário */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    display: block;
+    margin: 40px auto 0; /* Ajuste o valor de margem para posicionar o botão */
+}
+
+#playButton:hover {
+    transform: scale(1.1);
+}
